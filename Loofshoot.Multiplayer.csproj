@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DC780A2-3945-4497-B5FB-E070F2461E0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loofshoot.Multiplayer</RootNamespace>
+    <AssemblyName>Loofshoot.Multiplayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Runtime\Client.cs" />
+    <Compile Include="Runtime\Connection.cs" />
+    <Compile Include="Runtime\EventArgs.cs" />
+    <Compile Include="Runtime\Exceptions.cs" />
+    <Compile Include="Runtime\IMessageSerializable.cs" />
+    <Compile Include="Runtime\Message.cs" />
+    <Compile Include="Runtime\MessageHandlerAttribute.cs" />
+    <Compile Include="Runtime\MessageRelayFilter.cs" />
+    <Compile Include="Runtime\Peer.cs" />
+    <Compile Include="Runtime\PendingMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\Server.cs" />
+    <Compile Include="Runtime\Transports\EventArgs.cs" />
+    <Compile Include="Runtime\Transports\IClient.cs" />
+    <Compile Include="Runtime\Transports\IPeer.cs" />
+    <Compile Include="Runtime\Transports\IServer.cs" />
+    <Compile Include="Runtime\Transports\Tcp\TcpClient.cs" />
+    <Compile Include="Runtime\Transports\Tcp\TcpConnection.cs" />
+    <Compile Include="Runtime\Transports\Tcp\TcpPeer.cs" />
+    <Compile Include="Runtime\Transports\Tcp\TcpServer.cs" />
+    <Compile Include="Runtime\Transports\Udp\UdpClient.cs" />
+    <Compile Include="Runtime\Transports\Udp\UdpConnection.cs" />
+    <Compile Include="Runtime\Transports\Udp\UdpPeer.cs" />
+    <Compile Include="Runtime\Transports\Udp\UdpServer.cs" />
+    <Compile Include="Runtime\Utils\Bitfield.cs" />
+    <Compile Include="Runtime\Utils\ConnectionMetrics.cs" />
+    <Compile Include="Runtime\Utils\Converter.cs" />
+    <Compile Include="Runtime\Utils\DelayedEvents.cs" />
+    <Compile Include="Runtime\Utils\Extensions.cs" />
+    <Compile Include="Runtime\Utils\Helper.cs" />
+    <Compile Include="Runtime\Utils\PriorityQueue.cs" />
+    <Compile Include="Runtime\Utils\RiptideLogger.cs" />
+    <Compile Include="Runtime\Utils\RollingStat.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Loofshoot.Data\Loofshoot.Data.csproj">
+      <Project>{49b6b528-eee0-414f-b898-7fd601912980}</Project>
+      <Name>Loofshoot.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

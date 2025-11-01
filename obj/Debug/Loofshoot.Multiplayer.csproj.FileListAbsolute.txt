@@ -1,0 +1,6 @@
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\bin\Debug\Loofshoot.Multiplayer.dll
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\bin\Debug\Loofshoot.Multiplayer.pdb
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\obj\Debug\Loofshoot.Multiplayer.csproj.AssemblyReference.cache
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\obj\Debug\Loofshoot.Multiplayer.csproj.CoreCompileInputs.cache
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\obj\Debug\Loofshoot.Multiplayer.dll
+E:\Programs\Unity\Projects\Loofshoot\source\solution\Loofshoot.Multiplayer\obj\Debug\Loofshoot.Multiplayer.pdb
